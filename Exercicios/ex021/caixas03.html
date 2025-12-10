@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixas Personalizadas</title>
+    <style>
+        h1 {
+            border: 10px solid black;
+            /* border-image ordem:
+            1º: url da imagem
+            2º: fatia (slice) - quantos pixels da imagem serão usados para criar a borda
+            3º: repetir (repeat) - como a imagem será repetida para formar a borda (stretch, repeat, round, space)
+            */
+            border-image: url('borda.png') 38 repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inserindo Caixas Personalizadas</h1>
+</body>
+</html>
