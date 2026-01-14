@@ -14,17 +14,28 @@
             border-collapse: collapse;
         }
 
-        th {
-            background-color: lightgray;
+        caption {
+            padding: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+            background-color: gray;
         }
 
-        th.destaque {
-            height: 100px;
+        th {
+            background-color: lightgray;
         }
 
         td, th {
             border: 1px solid black;
             padding: 10px;
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: white; /* 2n-1 */
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: lightcyan; /* 2n pode por sem límites, 3n, 4n, 5n...em diante, vai pulando */
         }
 
         td.destaque {
@@ -56,6 +67,7 @@
     <h1>Uso de tabelas grandes</h1>
     <!--
     Anatomia tabelas grandes
+    CAPTION
     Thead
     th, tr, td
     Tbody
@@ -64,15 +76,16 @@
     th, tr, td
     -->
     <table>
+        <caption>Unidades federativas do Brasil por população</caption>
         <thead>
-            <th class="destaque"></th>
-            <th class="destaque">Unidade Federativa</th>
-            <th class="destaque">Estimativa populacional 2025</th>
-            <th class="destaque">Estimativa populacional 2024</th>
-            <th class="destaque">Variação percentual</th>
-            <th class="destaque">Variação absoluta</th>
-            <th class="destaque">% do total (2025)</th>
-            <th class="destaque">País comparável (habitantes)</th>
+            <th scope="col"></th>
+            <th scope="col">Unidade Federativa</th>
+            <th scope="col" style="width: 130px;">Estimativa populacional 2025</th>
+            <th scope="col" style="width: 130px;">Estimativa populacional 2024</th>
+            <th scope="col" style="width: 50px;">Variação percentual</th>
+            <th scope="col" style="width: 50px;">Variação absoluta</th>
+            <th scope="col" style="width: 50px;">% do total (2025)</th>
+            <th scope="col" style="width: 150px;">País comparável (habitantes)</th>
         </thead>
         <tbody>
             <tr>
@@ -349,7 +362,7 @@
         <tfoot>
             <tr>
                 <td class="destaque"></td>
-                <th>Total</th>
+                <th scope="row">Total</th>
                 <td class="negrito">213 421 037</td>
                 <td class="negrito">203 080 756</td>
                 <td class="negrito">12 324 957</td>
