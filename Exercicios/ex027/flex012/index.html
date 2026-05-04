@@ -16,22 +16,42 @@
             background-color: lightblue;
             border: 1px solid black;
             text-align: center;
-            flex-basis: 200px;
         }
 
         #cxA {
+            /* 
+            Ordem Shorthand:
+            
             flex-grow: 1;
             flex-shrink: 4;
+            flex-basis: 200px; 
+            */
+
+            flex: 1 4 150px;
         }
 
         #cxB {
+            /* 
+            Ordem Shorthand:
+            
             flex-grow: 2;
             flex-shrink: 1;
+            flex-basis: 200px; 
+            */
+
+            flex: 2 1 200px;
         }
 
         #cxC {
+            /* 
+            Ordem Shorthand:
+            
             flex-grow: 4;
             flex-shrink: 2;
+            flex-basis: 200px; 
+            */
+
+            flex: 4 2 300px;
         }
     </style>
 </head>

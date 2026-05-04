@@ -16,22 +16,42 @@
             background-color: lightblue;
             border: 1px solid black;
             text-align: center;
-            flex-basis: 200px;
         }
 
         #cxA {
-            flex-grow: 1;
-            flex-shrink: 4;
+            /* 
+            Valor padrão:
+
+            flex: 0 1 auto; 
+            */
+
+            flex: initial;
         }
 
         #cxB {
-            flex-grow: 2;
-            flex-shrink: 1;
+            /* flex: 0 0 auto; */
+            
+            flex: none;
         }
 
         #cxC {
-            flex-grow: 4;
-            flex-shrink: 2;
+            /* 
+            valor flexivel:
+
+            flex: 1 1 auto; 
+            */
+
+            flex: auto;
+        }
+
+        #cxD {
+            /* 
+            Valor do crescimento apenas:
+            
+            flex: 3; 
+            */
+
+            flex: 3 1 auto;
         }
     </style>
 </head>
@@ -40,6 +60,7 @@
         <div class="item" id="cxA">A</div>
         <div class="item" id="cxB">B</div>
         <div class="item" id="cxC">C</div>
+        <div class="item" id="cxD">D</div>
     </div>
 </body>
 </html>
